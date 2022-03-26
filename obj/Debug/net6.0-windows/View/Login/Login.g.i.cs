@@ -53,7 +53,7 @@ namespace O_PAY_O.View.Login {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/O-PAY-O;component/view/login/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/O-PAY-O;V1.0.0.0;component/view/login/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\Login\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

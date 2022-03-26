@@ -7,9 +7,10 @@ using SimpleInjector;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using O_PAY_O.View.Login;
+using O_PAY_O.View;
+//using O_PAY_O.View.Login;
 using O_PAY_O.ViewModel;
-using O_PAY_O.ViewModel.Login;
+//using O_PAY_O.ViewModel.Login;
 
 namespace O_PAY_O
 {
@@ -24,8 +25,8 @@ namespace O_PAY_O
         {
             Register();
 
-            StartMain<LoginViewModel>();
-            
+            StartMain<MainViewModel>();
+
 
             base.OnStartup(e);
         }
@@ -34,15 +35,15 @@ namespace O_PAY_O
         {
             Container = new Container();
 
-            Container.RegisterSingleton<LoginViewModel>();
-            Container.RegisterSingleton<RegisterViewModel>();
+            Container.RegisterSingleton<MainViewModel>();
+            Container.RegisterSingleton<DialogViewModel>();
 
             Container.Verify();
         }
 
         public void StartMain<T>() where T : ViewModelBase
         {
-            Window window = new Login();
+            Window window = new MainWindow();
             var viewModel = Container?.GetInstance<T>();
 
             window.DataContext = viewModel;
