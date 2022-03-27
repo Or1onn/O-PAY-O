@@ -6,15 +6,17 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
         xmlns:viewmodel="clr-namespace:O_PAY_O.ViewModel" 
-        xmlns:model="clr-namespace:O_PAY_O.Model" 
-        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+        xmlns:model="clr-namespace:O_PAY_O.Model" d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
         mc:Ignorable="d" AllowsTransparency="True"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Title="MainWindow" Height="490" Width="750"
         MinHeight="490" MinWidth="750"
         WindowStyle="None" Closed="Window_Closed" MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
-
+    <WindowChrome.WindowChrome>
+        <WindowChrome/>
+    </WindowChrome.WindowChrome>
+    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -51,7 +53,7 @@
         <!--LEFT ICONS-->
 
 
-        <Button Command="{Binding Add}" Style="{StaticResource MaterialDesignIconButton}" Grid.Row="2"  Background="Transparent" BorderBrush="Transparent"
+        <!--<Button Command="{Binding Add}" Style="{StaticResource MaterialDesignIconButton}" Grid.Row="2"  Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon x:Name="Sport" Kind="BasketballHoopOutline"  Width="40" Height="40" Foreground="#7cfc00"/>
             <Button.CommandParameter>
@@ -89,13 +91,13 @@
             <Button.CommandParameter>
                 <viewmodel:SeriesData Color="#FFD700" Count="10"/>
             </Button.CommandParameter>
-        </Button>
+        </Button>-->
 
 
         <!--RIGHT ICONS-->
 
 
-        <Button Command="{Binding Add}" Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <!--<Button Command="{Binding Add}" Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="Bus"  Width="40" Height="40" Foreground="#ff69b4"/>
             <Button.CommandParameter>
@@ -133,7 +135,7 @@
             <Button.CommandParameter>
                 <viewmodel:SeriesData Color="#D3D3D3" Count="10"/>
             </Button.CommandParameter>
-        </Button>
+        </Button>-->
 
         <!--TOP BORDER-->
 
@@ -147,7 +149,7 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Style="{StaticResource MaterialDesignIconButton}">
+            <Button Command="{Binding MainWindow}" Grid.Column="1" Style="{StaticResource MaterialDesignIconButton}">
                 <materialDesign:PackIcon Kind="Eye" Width="30" Height="30" Foreground="#f0f0f0"/>
             </Button>
 
@@ -159,7 +161,7 @@
                 <materialDesign:PackIcon Kind="Dollar" Width="40" Height="40" Foreground="#228b22"/>
             </Button>
 
-            <Button  Command="{Binding Open}" Grid.Column="4" Style="{StaticResource MaterialDesignIconButton}">
+            <Button  Command="{Binding Category}" Grid.Column="4" Style="{StaticResource MaterialDesignIconButton}">
                 <materialDesign:PackIcon Kind="ReorderHorizontal" Width="30" Height="30" Foreground="#f0f0f0"/>
             </Button>
         </Grid>
@@ -187,12 +189,8 @@
             <Button Grid.Column="1" Style="{StaticResource None}">
                 <materialDesign:PackIcon Kind="FormatVerticalAlignBottom" HorizontalAlignment="Center" Width="25" Height="25"/>
             </Button>
-            
-        </Grid>
 
-        <lvc:PieChart Grid.ColumnSpan="2" Grid.RowSpan="6" Series="{Binding SeriesCollection}" Grid.Row="1" InnerRadius="100" Height="250" Width="290"
-                          Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center" DataTooltip="{x:Null}">
-        </lvc:PieChart>
+        </Grid>
 
         <ContentControl Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5" Content="{Binding CurrentViewModel}"/>
     </Grid>

@@ -17,43 +17,8 @@ using O_PAY_O.Services.Classes;
 
 namespace O_PAY_O.ViewModel
 {
-
-    public class SeriesData
-    {
-        //public static readonly DependencyProperty Color = DependencyProperty.RegisterAttached(
-        //"Color", typeof(Brush), typeof(SeriesData), new PropertyMetadata(default(Brush)));
-
-        //public static void SetFormatSegment1(DependencyObject element, string value)
-        //{
-        //    element.SetValue(FormatSegment1Property, value);
-        //}
-
-        //public static string GetFormatSegment1(DependencyObject element)
-        //{
-        //    return (string)element.GetValue(FormatSegment1Property);
-        //}
-
-        public Brush? Color { get; set; }
-        public double Count { get; set; }
-    }
-
-
-
     public class MainViewModel : ViewModelBase
     {
-
-        //public static readonly DependencyProperty SelectedItemGUIDProperty = DependencyProperty.Register("Color", typeof(Guid?), typeof(UserControl), new FrameworkPropertyMetadata(null));
-
-        //public Brush? Color
-        //{
-        //public Brush? Color
-        //{
-        //    get { return (Guid?)GetValue(SelectedItemGUIDProperty); }
-        //    set { SetValue(Color, (Guid?)SelectedItem.GetType().GetProperty("GUID").GetValue(SelectedItem, null)); }
-        //}
-        //}
-        //}
-
 
         public MainViewModel()
         {
@@ -84,21 +49,10 @@ namespace O_PAY_O.ViewModel
             var vals = new ChartValues<ObservableValue>();
 
             vals.Add(new ObservableValue(10));
-            SeriesCollection.Add(new PieSeries
+            SeriesCollection?.Add(new PieSeries
             {
                 Values = vals,
                 Fill = obj.Color,
-            });
-        }
-
-
-        public SeriesCollection SeriesCollection { get; set; }
-
-        public RelayCommand Balance
-        {
-            get => new RelayCommand(() =>
-            {
-                //NavigationService.NavigateTo<>();
             });
         }
 
@@ -111,6 +65,8 @@ namespace O_PAY_O.ViewModel
                 a.ShowDialog();
             });
         }
+
+        public SeriesCollection? SeriesCollection { get; set; }
 
     }
 

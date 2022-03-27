@@ -10,6 +10,9 @@ using System.Windows;
 using O_PAY_O.View;
 //using O_PAY_O.View.Login;
 using O_PAY_O.ViewModel;
+using GalaSoft.MvvmLight.Messaging;
+using O_PAY_O.Services.Interfaces;
+using O_PAY_O.Services.Classes;
 //using O_PAY_O.ViewModel.Login;
 
 namespace O_PAY_O
@@ -19,13 +22,13 @@ namespace O_PAY_O
     /// </summary>
     public partial class App : Application
     {
-        public Container? Container { get; set; }
+        public static Container? Container { get; set; }
 
         protected override void OnStartup(StartupEventArgs e)
         {
             Register();
 
-            StartMain<MainViewModel>();
+            StartMain<MainWindowViewModel>();
 
 
             base.OnStartup(e);
@@ -35,7 +38,12 @@ namespace O_PAY_O
         {
             Container = new Container();
 
+            Container.RegisterSingleton<INavigationService, NavigationService>();
+            Container.RegisterSingleton<IMessenger, Messenger>();
+
+            Container.RegisterSingleton<MainWindowViewModel>();
             Container.RegisterSingleton<MainViewModel>();
+            Container.RegisterSingleton<CategoriesViewModel>();
             Container.RegisterSingleton<DialogViewModel>();
 
             Container.Verify();

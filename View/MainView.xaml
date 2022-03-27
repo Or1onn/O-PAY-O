@@ -3,10 +3,134 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
+             xmlns:viewmodel="clr-namespace:O_PAY_O.ViewModel"
              xmlns:local="clr-namespace:O_PAY_O.View"
+             d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#343155" Offset="0" />
+                <GradientStop Color="#4B2E58" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+
+        <!--LEFT ICONS-->
+
+
+        <Button Command="{Binding Add}" Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
+            <materialDesign:PackIcon x:Name="Sport" Kind="BasketballHoopOutline"  Width="40" Height="40" Foreground="#7cfc00"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#7cfc00" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button Command="{Binding Add}" Grid.Row="1" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
+            <materialDesign:PackIcon Kind="GiftOutline"  Width="40" Height="40" Foreground="#FF1493"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#FF1493" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button Command="{Binding Add}" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
+            <materialDesign:PackIcon Kind="Cat"  Width="40" Height="40" Foreground="#00bfff"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#00bfff" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button Command="{Binding Add}" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
+            <materialDesign:PackIcon Kind="FoodOutline"  Width="40" Height="40" Foreground="#ffdab9"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#ffdab9" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button Command="{Binding Add}" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
+            <materialDesign:PackIcon Kind="CarOutline"  Width="40" Height="40" Foreground="#FFD700"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#FFD700" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+
+        <!--RIGHT ICONS-->
+
+
+        <Button Command="{Binding Add}" Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
+            <materialDesign:PackIcon Kind="Bus"  Width="40" Height="40" Foreground="#ff69b4"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#ff69b4" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button Command="{Binding Add}"  Grid.Column="1" Grid.Row="1"  Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
+            <materialDesign:PackIcon Kind="MarketplaceOutline"  Width="40" Height="40" Foreground="#9370db"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#9370db" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button Command="{Binding Add}"   Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
+            <materialDesign:PackIcon Kind="HomeOutline"  Width="40" Height="40" Foreground="#40E0D0"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#40E0D0" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button  Command="{Binding Add}" Grid.Column="1" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
+            <materialDesign:PackIcon Kind="TshirtVOutline"  Width="40" Height="40" Foreground="#FF00FF"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#FF00FF" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button  Command="{Binding Add}" Grid.Column="1" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
+            <materialDesign:PackIcon Kind="PhoneOutline"  Width="40" Height="40" Foreground="#D3D3D3"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#D3D3D3" Count="10"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <lvc:PieChart Grid.ColumnSpan="2" Grid.RowSpan="3" Series="{Binding SeriesCollection}" Grid.Row="1" InnerRadius="100" Height="250" Width="290"
+                          Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center" DataTooltip="{x:Null}">
+        </lvc:PieChart>
     </Grid>
 </UserControl>

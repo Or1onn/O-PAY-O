@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace O_PAY_O.Services.Interfaces
 {
-    public class INavigationService
+    public interface INavigationService
     {
-        //public void NavigateTo<T>() where T : ViewModelBase;
+        public void NavigateTo<T>() where T : ViewModelBase;
     }
 }

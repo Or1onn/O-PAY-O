@@ -9,10 +9,17 @@
     <Application.Resources>
 
         <DataTemplate DataType="{x:Type ViewModel:MainViewModel}">
+            <View:MainView></View:MainView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModel:MainWindowViewModel}">
             <View:MainWindow></View:MainWindow>
         </DataTemplate>
 
-
+        <DataTemplate DataType="{x:Type ViewModel:CategoriesViewModel}">
+            <View:CategoriesView></View:CategoriesView>
+        </DataTemplate>
+        
         <Style x:Key="{x:Type Label}"
        TargetType="Label">
             <Setter Property="FontFamily"
