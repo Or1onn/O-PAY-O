@@ -14,14 +14,25 @@ using O_PAY_O.Model;
 using System.Windows.Media;
 using System.Windows;
 using O_PAY_O.Services.Classes;
+using O_PAY_O.Services.Interfaces;
+using O_PAY_O.Messages;
+using GalaSoft.MvvmLight.Messaging;
 
 namespace O_PAY_O.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        private ViewModelBase currentViewModel;
+        public INavigationService NavigationService { get; set; }
+        public ViewModelBase CurrentViewModel { get => currentViewModel; set => Set(ref currentViewModel, value); }
+        private readonly IMessenger? _messenger;
 
-        public MainViewModel()
+        public SeriesData SeriesData { get; set; }
+        public MainViewModel(IMessenger messenger, INavigationService navigationService)
         {
+            NavigationService = navigationService;
+            _messenger = messenger;
+
             SeriesCollection = new SeriesCollection
             {
                 new PieSeries
@@ -31,6 +42,9 @@ namespace O_PAY_O.ViewModel
                     DataLabels = false
                 },
             };
+
+            //_messenger.Register<SeriesDataMessage>(this, message => SeriesData = message.SeriesData!);
+            //AddSeries(SeriesData!);
         }
 
         private RelayCommand<SeriesData> add;
@@ -48,7 +62,7 @@ namespace O_PAY_O.ViewModel
         {
             var vals = new ChartValues<ObservableValue>();
 
-            vals.Add(new ObservableValue(10));
+            vals?.Add(new ObservableValue(10));
             SeriesCollection?.Add(new PieSeries
             {
                 Values = vals,
@@ -56,14 +70,17 @@ namespace O_PAY_O.ViewModel
             });
         }
 
-        public RelayCommand Open
+        public RelayCommand<SeriesData>? OpenDialog
         {
-            get => new RelayCommand(() =>
-            {
-                DialogView a = new();
-
-                a.ShowDialog();
-            });
+            get => new RelayCommand<SeriesData>(
+                param =>
+                {
+                    if (param != null)
+                    {
+                        NavigationService?.NavigateTo<DialogViewModel>();
+                        _messenger?.Send(new SeriesDataMessage() { SeriesData = param });
+                    }
+                });
         }
 
         public SeriesCollection? SeriesCollection { get; set; }

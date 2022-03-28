@@ -13,10 +13,6 @@
         MinHeight="490" MinWidth="750"
         WindowStyle="None" Closed="Window_Closed" MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
-    <WindowChrome.WindowChrome>
-        <WindowChrome/>
-    </WindowChrome.WindowChrome>
-    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

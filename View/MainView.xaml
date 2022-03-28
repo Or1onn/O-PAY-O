@@ -40,20 +40,25 @@
             </LinearGradientBrush>
         </Grid.Background>
 
+        <!--<LinearGradientBrush StartPoint="0.5,0" EndPoint="0,2">
+            <GradientStop Color="#343155" Offset="0" />
+            <GradientStop Color="#ffff" Offset="0.2" />
+            <GradientStop Color="#4B2E58" Offset="0.4" />
+        </LinearGradientBrush>-->
 
 
         <!--LEFT ICONS-->
 
 
-        <Button Command="{Binding Add}" Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}" Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon x:Name="Sport" Kind="BasketballHoopOutline"  Width="40" Height="40" Foreground="#7cfc00"/>
-            <Button.CommandParameter>
+            <!--<Button.CommandParameter>
                 <viewmodel:SeriesData Color="#7cfc00" Count="10"/>
-            </Button.CommandParameter>
+            </Button.CommandParameter>-->
         </Button>
 
-        <Button Command="{Binding Add}" Grid.Row="1" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}" Grid.Row="1" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="GiftOutline"  Width="40" Height="40" Foreground="#FF1493"/>
             <Button.CommandParameter>
@@ -61,7 +66,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button Command="{Binding Add}" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="Cat"  Width="40" Height="40" Foreground="#00bfff"/>
             <Button.CommandParameter>
@@ -69,7 +74,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button Command="{Binding Add}" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="FoodOutline"  Width="40" Height="40" Foreground="#ffdab9"/>
             <Button.CommandParameter>
@@ -77,7 +82,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button Command="{Binding Add}" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="CarOutline"  Width="40" Height="40" Foreground="#FFD700"/>
             <Button.CommandParameter>
@@ -89,7 +94,7 @@
         <!--RIGHT ICONS-->
 
 
-        <Button Command="{Binding Add}" Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}" Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="Bus"  Width="40" Height="40" Foreground="#ff69b4"/>
             <Button.CommandParameter>
@@ -97,7 +102,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button Command="{Binding Add}"  Grid.Column="1" Grid.Row="1"  Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}"  Grid.Column="1" Grid.Row="1"  Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="MarketplaceOutline"  Width="40" Height="40" Foreground="#9370db"/>
             <Button.CommandParameter>
@@ -105,7 +110,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button Command="{Binding Add}"   Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button Command="{Binding OpenDialog}"   Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="HomeOutline"  Width="40" Height="40" Foreground="#40E0D0"/>
             <Button.CommandParameter>
@@ -113,7 +118,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button  Command="{Binding Add}" Grid.Column="1" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button  Command="{Binding OpenDialog}" Grid.Column="1" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="TshirtVOutline"  Width="40" Height="40" Foreground="#FF00FF"/>
             <Button.CommandParameter>
@@ -121,7 +126,7 @@
             </Button.CommandParameter>
         </Button>
 
-        <Button  Command="{Binding Add}" Grid.Column="1" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+        <Button  Command="{Binding OpenDialog}" Grid.Column="1" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="PhoneOutline"  Width="40" Height="40" Foreground="#D3D3D3"/>
             <Button.CommandParameter>
@@ -132,5 +137,8 @@
         <lvc:PieChart Grid.ColumnSpan="2" Grid.RowSpan="3" Series="{Binding SeriesCollection}" Grid.Row="1" InnerRadius="100" Height="250" Width="290"
                           Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center" DataTooltip="{x:Null}">
         </lvc:PieChart>
+
+
+        <ContentControl Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="5" Content="{Binding CurrentViewModel}"/>
     </Grid>
 </UserControl>

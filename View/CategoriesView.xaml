@@ -27,8 +27,8 @@
             <RowDefinition Height="0.2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>-->
-        
-        
+
+
         <Label Content="C++ One Live" FontSize="100" Foreground="White"/>
     </Grid>
 </UserControl>

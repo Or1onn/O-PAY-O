@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace O_PAY_O.View
@@ -17,19 +18,11 @@ namespace O_PAY_O.View
     /// <summary>
     /// Interaction logic for DialogView.xaml
     /// </summary>
-    public partial class DialogView : Window
+    public partial class DialogView : UserControl
     {
         public DialogView()
         {
             InitializeComponent();
-
-        }
-
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
         }
     }
-
-  
 }

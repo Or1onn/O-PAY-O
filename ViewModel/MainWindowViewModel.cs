@@ -39,8 +39,8 @@ namespace O_PAY_O.ViewModel
 
             messenger.Register<NavigationMessage>(this, message =>
             {
-                var viewModel = App.Container?.GetInstance(message.ViewModelType) as ViewModelBase;
-                CurrentViewModel = viewModel;
+                var viewModel = App.Container?.GetInstance(message.ViewModelType!) as ViewModelBase;
+                CurrentViewModel = viewModel!;
             });
 
             NavigationService?.NavigateTo<MainViewModel>();
@@ -63,6 +63,5 @@ namespace O_PAY_O.ViewModel
                 NavigationService.NavigateTo<MainViewModel>();
             });
         }
-        public WindowState WindowState { get; private set; }
     }
 }
