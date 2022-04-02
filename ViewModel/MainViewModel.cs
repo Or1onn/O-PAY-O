@@ -17,35 +17,73 @@ using O_PAY_O.Services.Classes;
 using O_PAY_O.Services.Interfaces;
 using O_PAY_O.Messages;
 using GalaSoft.MvvmLight.Messaging;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 namespace O_PAY_O.ViewModel
 {
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase, INotifyPropertyChanged
     {
         private ViewModelBase currentViewModel;
         public INavigationService NavigationService { get; set; }
         public ViewModelBase CurrentViewModel { get => currentViewModel; set => Set(ref currentViewModel, value); }
         private readonly IMessenger? _messenger;
 
+        public IncomesModel Income { get; set; }
+
         public SeriesData SeriesData { get; set; }
+
+
         public MainViewModel(IMessenger messenger, INavigationService navigationService)
         {
             NavigationService = navigationService;
             _messenger = messenger;
 
-            SeriesCollection = new SeriesCollection
-            {
-                new PieSeries
-                {
-                    Title = "NULL",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(0) },
-                    DataLabels = false
-                },
-            };
+            SeriesCollection = new();
 
-            //_messenger.Register<SeriesDataMessage>(this, message => SeriesData = message.SeriesData!);
-            //AddSeries(SeriesData!);
+            _messenger.Register<SeriesDataMessage>(this, message =>
+            {
+                SeriesData = message.SeriesData!;
+                ExpensesText = Convert.ToString(Convert.ToDouble(ExpensesText) + SeriesData.Count);
+                AddSeries(SeriesData);
+            });
+
+            _messenger.Register<IncomeMessages>(this,
+                message =>
+                {
+                    Income = message.Incomes!;
+                    IncomeText = Convert.ToString(Convert.ToDouble(IncomeText) + Income.Amount);
+                });
         }
+
+        private string? incomeText;
+        public string? IncomeText
+        {
+            get
+            {
+                return incomeText;
+            }
+            set
+            {
+                incomeText = value;
+                Set(ref incomeText, value);
+            }
+        }
+
+        private string? expensesText;
+        public string? ExpensesText
+        {
+            get
+            {
+                return expensesText;
+            }
+            set
+            {
+                expensesText = value;
+                Set(ref expensesText, value);
+            }
+        }
+
 
         private RelayCommand<SeriesData> add;
         public RelayCommand<SeriesData> Add
@@ -60,14 +98,34 @@ namespace O_PAY_O.ViewModel
 
         private void AddSeries(SeriesData obj)
         {
-            var vals = new ChartValues<ObservableValue>();
-
-            vals?.Add(new ObservableValue(10));
-            SeriesCollection?.Add(new PieSeries
+            if (obj?.Count != 0)
             {
-                Values = vals,
-                Fill = obj.Color,
-            });
+                var vals = new ChartValues<ObservableValue>();
+
+                foreach (var item in SeriesCollection!)
+                {
+                    if (item.Title == obj?.Name)
+                    {
+                        vals?.Add(new ObservableValue(obj!.Count));
+                        vals?.Add((ObservableValue)item.Values[0]!);
+                        item.Values[0] = new ObservableValue(vals![0].Value + vals[1].Value);
+
+                        vals?.Clear();
+
+                        return;
+                    }
+                }
+
+                vals?.Add(new ObservableValue(obj!.Count));
+
+                SeriesCollection?.Add(new PieSeries
+                {
+                    Values = vals,
+                    Fill = obj?.Color,
+                    Title = obj?.Name,
+                });
+
+            }
         }
 
         public RelayCommand<SeriesData>? OpenDialog
@@ -83,8 +141,15 @@ namespace O_PAY_O.ViewModel
                 });
         }
 
+        public RelayCommand Incomes
+        {
+            get => new RelayCommand(() =>
+            {
+                NavigationService.NavigateTo<IncomeViewModel>();
+            });
+        }
+
         public SeriesCollection? SeriesCollection { get; set; }
 
     }
-
 }

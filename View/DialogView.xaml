@@ -61,7 +61,7 @@
         <Button Command="{Binding Input}" CommandParameter="9" Content="9" Grid.Column="3" Grid.Row="4"/>
         <Button Command="{Binding Input}" CommandParameter="9" Content="9" Grid.Column="3" Grid.Row="4"/>
 
-        <Button Command="{Binding SendToMain}" Margin="1" Height="55" Width="80" Style="{StaticResource WD}" CommandParameter="9" Grid.Column="3" Grid.Row="5" Background="#00bfff">
+        <Button Command="{Binding SendToMain}" Margin="1" Height="55" Width="80" Style="{StaticResource WD}" CommandParameter="{Binding TextInput}" Grid.Column="3" Grid.Row="5" Background="#00bfff">
             <materialDesign:PackIcon Kind="ArrowRightBold"  Width="40" Height="40"/>
         </Button>
 
@@ -69,7 +69,7 @@
         <Button Command="{Binding Backspace}" CommandParameter="7" Content="&#9003;" Foreground="Red" Grid.Column="4" Width="70" Margin="2" HorizontalAlignment="Left" Grid.Row="2"/>
 
         <TextBox Text="{Binding TextInput, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="5" Background="Transparent" Width="350" Height="70" VerticalAlignment="Bottom" 
-                 Margin="30,0,0,30" Grid.Row="1" FontSize="30" BorderBrush="Gray" Foreground="#FF00FF" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
+                 Margin="30,0,0,30" IsReadOnly="True" Grid.Row="1" FontSize="30" BorderBrush="Gray" Foreground="#FF00FF" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

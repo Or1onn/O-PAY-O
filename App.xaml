@@ -22,8 +22,16 @@
 
         <DataTemplate DataType="{x:Type ViewModel:DialogViewModel}">
             <View:DialogView></View:DialogView>
-        </DataTemplate>    
+        </DataTemplate>
 
+        <DataTemplate DataType="{x:Type ViewModel:IncomeViewModel}">
+            <View:IncomeView></View:IncomeView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModel:IncomeTypeViewModel}">
+            <View:IncomeTypeView></View:IncomeTypeView>
+        </DataTemplate>
+        
         <Style x:Key="{x:Type Label}"
        TargetType="Label">
             <Setter Property="FontFamily"

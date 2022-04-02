@@ -53,16 +53,16 @@
         <Button Command="{Binding OpenDialog}" Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon x:Name="Sport" Kind="BasketballHoopOutline"  Width="40" Height="40" Foreground="#7cfc00"/>
-            <!--<Button.CommandParameter>
-                <viewmodel:SeriesData Color="#7cfc00" Count="10"/>
-            </Button.CommandParameter>-->
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#7cfc00" Name="Sport"/>
+            </Button.CommandParameter>
         </Button>
 
         <Button Command="{Binding OpenDialog}" Grid.Row="1" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="GiftOutline"  Width="40" Height="40" Foreground="#FF1493"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#FF1493" Count="10"/>
+                <viewmodel:SeriesData Color="#FF1493"  Name="Gifts"/>
             </Button.CommandParameter>
         </Button>
 
@@ -70,7 +70,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="Cat"  Width="40" Height="40" Foreground="#00bfff"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#00bfff" Count="10"/>
+                <viewmodel:SeriesData Color="#00bfff" Name="Animals"/>
             </Button.CommandParameter>
         </Button>
 
@@ -78,7 +78,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="FoodOutline"  Width="40" Height="40" Foreground="#ffdab9"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#ffdab9" Count="10"/>
+                <viewmodel:SeriesData Color="#ffdab9" Name="Food"/>
             </Button.CommandParameter>
         </Button>
 
@@ -86,7 +86,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
             <materialDesign:PackIcon Kind="CarOutline"  Width="40" Height="40" Foreground="#FFD700"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#FFD700" Count="10"/>
+                <viewmodel:SeriesData Color="#FFD700" Name="Vehicles"/>
             </Button.CommandParameter>
         </Button>
 
@@ -98,7 +98,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="Bus"  Width="40" Height="40" Foreground="#ff69b4"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#ff69b4" Count="10"/>
+                <viewmodel:SeriesData Color="#ff69b4" Name="Bus"/>
             </Button.CommandParameter>
         </Button>
 
@@ -106,7 +106,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="MarketplaceOutline"  Width="40" Height="40" Foreground="#9370db"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#9370db" Count="10"/>
+                <viewmodel:SeriesData Color="#9370db" Name="Shopping"/>
             </Button.CommandParameter>
         </Button>
 
@@ -114,7 +114,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="HomeOutline"  Width="40" Height="40" Foreground="#40E0D0"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#40E0D0" Count="10"/>
+                <viewmodel:SeriesData Color="#40E0D0" Name="Home"/>
             </Button.CommandParameter>
         </Button>
 
@@ -122,7 +122,7 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="TshirtVOutline"  Width="40" Height="40" Foreground="#FF00FF"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#FF00FF" Count="10"/>
+                <viewmodel:SeriesData Color="#FF00FF" Name="Dresses"/>
             </Button.CommandParameter>
         </Button>
 
@@ -130,15 +130,29 @@
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 40, 0">
             <materialDesign:PackIcon Kind="PhoneOutline"  Width="40" Height="40" Foreground="#D3D3D3"/>
             <Button.CommandParameter>
-                <viewmodel:SeriesData Color="#D3D3D3" Count="10"/>
+                <viewmodel:SeriesData Color="#D3D3D3" Name="Phone"/>
+            </Button.CommandParameter>
+        </Button>
+
+        <Button  Command="{Binding Incomes}" Grid.ColumnSpan="2" Grid.Row="4" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
+                     Height="80" Width="80">
+            <materialDesign:PackIcon Kind="PlusCircleOutline" Width="70" Height="70" Foreground="LightGreen"/>
+            <Button.CommandParameter>
+                <viewmodel:SeriesData Color="#D3D3D3" Name="Phone"/>
             </Button.CommandParameter>
         </Button>
 
         <lvc:PieChart Grid.ColumnSpan="2" Grid.RowSpan="3" Series="{Binding SeriesCollection}" Grid.Row="1" InnerRadius="100" Height="250" Width="290"
-                          Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center" DataTooltip="{x:Null}">
+                      Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center" DataTooltip="{x:Null}" Margin="0,0,0,5">
         </lvc:PieChart>
 
 
         <ContentControl Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="5" Content="{Binding CurrentViewModel}"/>
+
+        <Label Content="{Binding ExpensesText}" Grid.Row="2" Grid.ColumnSpan="2" FontSize="25"
+               HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Red"/>
+
+        <Label Content="{Binding IncomeText, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.ColumnSpan="2" FontSize="25"
+               HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Green"/>
     </Grid>
 </UserControl>

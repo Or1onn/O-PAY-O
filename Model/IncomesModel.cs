@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace O_PAY_O.Model
 {
-    internal class IncomesModel
+    public enum INCOMES_TYPE { CASH, CARD, SAVINGS }
+
+    public class IncomesModel
     {
-        public float Amount { get; set; }
-        public string? Type { get; set; }
+        public double? Amount { get; set; }
+        public INCOMES_TYPE Type { get; set; } = INCOMES_TYPE.CASH;
+        public TIME Time { get; set; } = TIME.WEEK;
     }
 }

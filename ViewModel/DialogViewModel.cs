@@ -14,6 +14,7 @@ using O_PAY_O.Model;
 using System.Windows.Media;
 using System.Windows;
 using O_PAY_O.Services.Classes;
+using O_PAY_O.ViewModel;
 using O_PAY_O.Services.Interfaces;
 using O_PAY_O.Messages;
 using GalaSoft.MvvmLight.Messaging;
@@ -102,15 +103,7 @@ namespace O_PAY_O.ViewModel
 
                 _navigationMessage?.NavigateTo<MainViewModel>();
                 _messenger?.Send(new SeriesDataMessage() { SeriesData = SeriesData });
-
-                //var vals = new ChartValues<ObservableValue>();
-
-                //vals.Add(new ObservableValue(10));
-                //SeriesCollection?.Add(new PieSeries
-                //{
-                //    Values = vals,
-                //    Fill = obj.Color,
-                //});
+                TextInput = null;
             });
         }
     }

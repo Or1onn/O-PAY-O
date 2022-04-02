@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace O_PAY_O.Messages
 {
-    internal class SeriesDataMessage
+    public class SeriesDataMessage
     {
         public SeriesData? SeriesData { get; set; }
     }

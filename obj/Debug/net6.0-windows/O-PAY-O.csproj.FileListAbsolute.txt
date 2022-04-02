@@ -70,3 +70,7 @@ C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\O-PAY-O.genruntimec
 C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\ref\O-PAY-O.dll
 C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\CategoriesView.g.cs
 C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\CategoriesView.baml
+C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeView.g.cs
+C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeView.baml
+C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeTypeView.g.cs
+C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeTypeView.baml

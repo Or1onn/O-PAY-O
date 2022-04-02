@@ -22,6 +22,7 @@ namespace O_PAY_O.ViewModel
     {
         public Brush? Color { get; set; }
         public double Count { get; set; }
+        public string? Name { get; set; }
     }
 
 
@@ -55,6 +56,13 @@ namespace O_PAY_O.ViewModel
             });
         }
 
+        public RelayCommand IncomeTypes
+        {
+            get => new RelayCommand(() =>
+            {
+                NavigationService.NavigateTo<IncomeTypeViewModel>();
+            });
+        }
 
         public RelayCommand MainWindow
         {

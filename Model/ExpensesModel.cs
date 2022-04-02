@@ -8,7 +8,7 @@ namespace O_PAY_O.Model
 {
     internal class ExpensesModel
     {
-        public float Amount { get; set; }
-        public string? Type { get; set; }
+        public double? Amount { get; set; }
+        public string? Category { get; set; }
     }
 }

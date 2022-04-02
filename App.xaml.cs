@@ -44,6 +44,8 @@ namespace O_PAY_O
             Container.RegisterSingleton<MainWindowViewModel>();
             Container.RegisterSingleton<MainViewModel>();
             Container.RegisterSingleton<CategoriesViewModel>();
+            Container.RegisterSingleton<IncomeViewModel>();
+            Container.RegisterSingleton<IncomeTypeViewModel>();
             Container.RegisterSingleton<DialogViewModel>();
 
             Container.Verify();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace O_PAY_O.Model
 {
-    enum TIME { WEEK, MONTH, YEAR }
+    public enum TIME { WEEK, MONTH, YEAR }
 
     internal class TimeModel
     {
