@@ -74,3 +74,9 @@ C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeView.g.c
 C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeView.baml
 C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeTypeView.g.cs
 C:\Users\salax\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeTypeView.baml
+C:\Users\User\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\CategoriesView.g.cs
+C:\Users\User\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeTypeView.g.cs
+C:\Users\User\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeView.g.cs
+C:\Users\User\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\CategoriesView.baml
+C:\Users\User\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeTypeView.baml
+C:\Users\User\source\repos\O-PAY-O\obj\Debug\net6.0-windows\View\IncomeView.baml

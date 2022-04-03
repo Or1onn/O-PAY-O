@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "3Jn0/xx/t0/lK8Z4Zy0sE0NZgHFgS6OJV2QiuFofTXNiCkPk2yRiUtQQssm1RnAUHNfIIQSrfa+cNKucEkO8Hw==",
+  "dgSpecHash": "FIvQHeQ1Hhs5SEIYKV4tzw/m4U+44R1zx7OxGHIFEcV08uSH5OZmx1q+pQyw1pQFTbiQdvrL6CN6mx8pOfd7yQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\salax\\source\\repos\\O-PAY-O\\O-PAY-O.csproj",
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\O-PAY-O\\O-PAY-O.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\salax\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\mvvmlightstd10\\5.4.1.2\\mvvmlightstd10.5.4.1.2.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\simpleinjector\\5.3.3\\simpleinjector.5.3.3.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
-    "C:\\Users\\salax\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mvvmlightstd10\\5.4.1.2\\mvvmlightstd10.5.4.1.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\simpleinjector\\5.3.3\\simpleinjector.5.3.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
   ],
   "logs": [
     {

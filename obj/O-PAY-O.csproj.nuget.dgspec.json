@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salax\\source\\repos\\O-PAY-O\\O-PAY-O.csproj": {}
+    "C:\\Users\\User\\source\\repos\\O-PAY-O\\O-PAY-O.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salax\\source\\repos\\O-PAY-O\\O-PAY-O.csproj": {
+    "C:\\Users\\User\\source\\repos\\O-PAY-O\\O-PAY-O.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salax\\source\\repos\\O-PAY-O\\O-PAY-O.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\O-PAY-O\\O-PAY-O.csproj",
         "projectName": "O-PAY-O",
-        "projectPath": "C:\\Users\\salax\\source\\repos\\O-PAY-O\\O-PAY-O.csproj",
-        "packagesPath": "C:\\Users\\salax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salax\\source\\repos\\O-PAY-O\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\O-PAY-O\\O-PAY-O.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\O-PAY-O\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\salax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
