@@ -3,7 +3,7 @@
 
 ## 5.0 Release 
 
-**This program made **
+**This program made**
 
 
 
@@ -22,5 +22,6 @@
 
 
 
-***&#169; 2022 O-PAY-O, All rights reserved***</a>
+***&#169; 2022 O-PAY-O, All rights reserved***
+</a>
 ***&#174; LLC «Flexible Software», 2022***
