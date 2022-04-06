@@ -22,5 +22,5 @@
 
 
 
-***© 2022 O-PAY-O, All rights reserved***
+***© 2022 O-PAY-O, All rights reserved*** /n
 ***&#174; LLC «Flexible Software», 2022***
