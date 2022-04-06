@@ -40,13 +40,6 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <!--<LinearGradientBrush StartPoint="0.5,0" EndPoint="0,2">
-            <GradientStop Color="#343155" Offset="0" />
-            <GradientStop Color="#ffff" Offset="0.2" />
-            <GradientStop Color="#4B2E58" Offset="0.4" />
-        </LinearGradientBrush>-->
-
-
         <!--LEFT ICONS-->
 
 
@@ -76,7 +69,7 @@
 
         <Button Command="{Binding OpenDialog}" Grid.Row="3" Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" BorderBrush="Transparent"
                      Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40, 0, 0, 0">
-            <materialDesign:PackIcon Kind="FoodOutline"  Width="40" Height="40" Foreground="#ffdab9"/>
+            <materialDesign:PackIcon Kind="FoodForkDrink"  Width="40" Height="40" Foreground="#ffdab9"/>
             <Button.CommandParameter>
                 <viewmodel:SeriesData Color="#ffdab9" Name="Food"/>
             </Button.CommandParameter>
@@ -142,8 +135,11 @@
             </Button.CommandParameter>
         </Button>
 
-        <lvc:PieChart Grid.ColumnSpan="2" Grid.RowSpan="3" Series="{Binding SeriesCollection}" Grid.Row="1" InnerRadius="100" Height="250" Width="290"
-                      Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center" DataTooltip="{x:Null}" Margin="0,0,0,5">
+        <lvc:PieChart  Grid.ColumnSpan="2" Grid.RowSpan="3" Series="{Binding SeriesCollection}" Grid.Row="1" InnerRadius="100" Height="250" Width="290"
+                      Hoverable="False" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0,0,0,5">
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="15"></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
         </lvc:PieChart>
 
 

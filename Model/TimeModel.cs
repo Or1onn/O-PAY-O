@@ -8,7 +8,7 @@ namespace O_PAY_O.Model
 {
     public enum TIME { WEEK, MONTH, YEAR }
 
-    internal class TimeModel
+    public class TimeModel
     {
         public TIME Time { get; set; } = TIME.WEEK;
         public IncomesModel? Incomes { get; set; } = new();

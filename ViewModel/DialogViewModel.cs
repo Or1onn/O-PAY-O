@@ -50,10 +50,7 @@ namespace O_PAY_O.ViewModel
         private string? textInput;
         public string? TextInput
         {
-            get
-            {
-                return textInput;
-            }
+            get { return textInput; }
             set
             {
                 textInput = value;
@@ -61,21 +58,19 @@ namespace O_PAY_O.ViewModel
             }
         }
 
-        private RelayCommand<string>? input;
         public RelayCommand<string> Input
         {
-            get
+            get => new RelayCommand<string>(
+            param =>
             {
-                input = new RelayCommand<string>(ButtonInput);
-                return input;
-            }
+                if (param != null)
+                {
+                    TextInput += param;
+                    this.NotifyPropertyChanged("textInput");
+                }
+            });
         }
 
-        public void ButtonInput(string number)
-        {
-            TextInput += number;
-            this.NotifyPropertyChanged("textInput");
-        }
 
         public RelayCommand Backspace
         {
@@ -85,6 +80,7 @@ namespace O_PAY_O.ViewModel
                 this.NotifyPropertyChanged("textInput");
             });
         }
+
 
         public RelayCommand Clean
         {

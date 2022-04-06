@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +11,24 @@ namespace O_PAY_O.ViewModel
 {
     public class IncomeTypeViewModel : ViewModelBase
     {
-        private ObservableCollection<string>? incomes = new() { "VISA", "MASTER CARD" };
-        public ObservableCollection<string>? Incomes
+        private ObservableCollection<string>? type = new() { "CASH", "VISA" };
+        public ObservableCollection<string>? Type
         {
-            get { return incomes; }
-            set => Set(ref incomes, value);
+            get { return type; }
+            set => Set(ref type, value);
+        }
+        private string? abc = "VISA";
+        public string? Abc
+        {
+            get { return abc; }
+            set => Set(ref abc, value);
         }
 
-        private string? incomeText = "1";
+
+        private string? incomeText;
         public string? IncomeText
         {
-            get
-            {
-                return incomeText;
-            }
+            get { return incomeText; }
             set
             {
                 incomeText = value;
@@ -34,16 +39,12 @@ namespace O_PAY_O.ViewModel
         private string? expensesText;
         public string? ExpensesText
         {
-            get
-            {
-                return expensesText;
-            }
+            get { return expensesText; }
             set
             {
                 expensesText = value;
                 Set(ref expensesText, value);
             }
         }
-
     }
 }

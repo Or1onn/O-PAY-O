@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:local="clr-namespace:O_PAY_O.View"
+             xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:O_PAY_O.View" xmlns:viewmodel="clr-namespace:O_PAY_O.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CategoriesViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -25,20 +26,98 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <wpfx:ColorPicker  Width="100" Height="50" SelectedColor="{Binding Color}" Margin="60,0,0,0" HorizontalAlignment="Left" DisplayColorAndName="True" />
         <TextBox Text="{Binding TextInput, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" Background="Transparent" Width="350" Height="70" VerticalAlignment="Center" 
-                 Grid.Row="0" FontSize="30" BorderBrush="Gray" Foreground="#FF00FF" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">
+                 Grid.Row="0" FontSize="30" BorderBrush="Gray" Foreground="#FF00FF" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-
         <Button Command="{Binding Confirm}" Style="{StaticResource WD}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right"
                 Width="150" Margin="0,0,40,0" Height="50" Content="Confirm"/>
 
-        <WrapPanel Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
-            <Button Command="{Binding Input}"  Content="9" Grid.Column="3" Grid.Row="4"/>
+        
+        <WrapPanel x:Name="sp"  Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
+            
+            <Button>
+                <materialDesign:PackIcon Kind="GiftOutline" Foreground="#FF1493" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="BasketballHoopOutline" Foreground="#7cfc00" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Cat" Foreground="#00bfff" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="FoodOutline" Foreground="#DDD000" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="CarOutline" Foreground="#FFD700" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Bus" Foreground="#ff69b4" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="MarketplaceOutline" Foreground="#9370db" Width="80" Height="80"/>
+            </Button>
+            <Button>
+                <materialDesign:PackIcon Kind="HomeOutline" Foreground="#40E0D0" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="TshirtVOutline" Foreground="#FF00FF" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="PhoneOutline" Foreground="#D3D3D3" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Vacuum" Foreground="#5cfa8b" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="TreeOutline" Foreground="#61C026" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="FoodForkDrink" Foreground="#ffdab9" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="TagOutline" Foreground="#6f65eb" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Temperature" Foreground="#ff0f7b" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Baby" Foreground="#00aaff" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Comedy" Foreground="#ff4000" Width="80" Height="80"/>
+            </Button>
+
+            <Button>
+                <materialDesign:PackIcon Kind="Company" Foreground="#24bfa6" Width="80" Height="80"/>
+            </Button>
         </WrapPanel>
+
+        <Line x:Name="Line1" Visibility="Visible" Grid.ColumnSpan="2" Grid.RowSpan="2" Stroke="Black" StrokeThickness="5" Stretch="Fill"
+                X1="0" Y1="0" X2="1" Y2="1" />
+        <Line x:Name="Line2" Visibility="Visible" Grid.ColumnSpan="2" Grid.RowSpan="2" Stroke="Black" StrokeThickness="5" Stretch="Fill"
+                X1="0" Y1="1" X2="1" Y2="0" />
+
+        <Label Content="COMING SOON" FontSize="60" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" />
     </Grid>
 </UserControl>

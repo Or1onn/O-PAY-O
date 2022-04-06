@@ -22,12 +22,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ListBox x:Name="a" FontSize="25"  ItemsSource="{Binding Incomes}" Background="Transparent" >
+        <ListBox  FontSize="25"  ItemsSource="{Binding Type}" Background="Transparent" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Height="60"  Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Payment" Margin="0,0,0,10" Width="50" Height="50" Foreground="White"/>
-                        <Label HorizontalContentAlignment="Right" Margin="15,0,0,0" FontSize="30" Content="VISA" Foreground="Black"/>
+                        <Label HorizontalContentAlignment="Right" Margin="15,0,0,0" FontSize="30" Content="{Binding Abc}" Foreground="Black"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -67,6 +67,13 @@
             <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" Content="{Binding ExpensesText}" FontSize="30"
                    Foreground="White" HorizontalAlignment="Left" />
         </Grid>
+
+        <Line x:Name="Line1" Visibility="Visible" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="5" Stretch="Fill"
+                X1="0" Y1="0" X2="1" Y2="1" />
+        <Line x:Name="Line2" Visibility="Visible" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="5" Stretch="Fill"
+                X1="0" Y1="1" X2="1" Y2="0" />
+
+        <Label Content="COMING SOON" FontSize="60" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" />
 
     </Grid>
 </UserControl>

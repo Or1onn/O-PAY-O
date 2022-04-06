@@ -1,0 +1,37 @@
+[
+  {
+    "Amount": 5,
+    "Category": "Sport",
+    "Color": "#FF7CFC00"
+  },
+  {
+    "Amount": 12,
+    "Category": "Gifts",
+    "Color": "#FFFF1493"
+  },
+  {
+    "Amount": 75,
+    "Category": "Food",
+    "Color": "#FFFFDAB9"
+  },
+  {
+    "Amount": 5614,
+    "Category": "Bus",
+    "Color": "#FFFF69B4"
+  },
+  {
+    "Amount": 173,
+    "Category": "Home",
+    "Color": "#FF40E0D0"
+  },
+  {
+    "Amount": 39,
+    "Category": "Vehicles",
+    "Color": "#FFFFD700"
+  },
+  {
+    "Amount": 7,
+    "Category": "Shopping",
+    "Color": "#FF9370DB"
+  }
+]

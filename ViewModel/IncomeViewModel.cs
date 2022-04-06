@@ -49,10 +49,7 @@ namespace O_PAY_O.ViewModel
         private string? textInput;
         public string? TextInput
         {
-            get
-            {
-                return textInput;
-            }
+            get { return textInput; }
             set
             {
                 textInput = value;
@@ -63,10 +60,7 @@ namespace O_PAY_O.ViewModel
         private string? typeBox;
         public string? TypeBox
         {
-            get
-            {
-                return typeBox;
-            }
+            get { return typeBox; }
             set
             {
                 typeBox = value;
@@ -77,10 +71,7 @@ namespace O_PAY_O.ViewModel
         private string? timeBox;
         public string? TimeBox
         {
-            get
-            {
-                return timeBox;
-            }
+            get { return timeBox; }
             set
             {
                 timeBox = value;

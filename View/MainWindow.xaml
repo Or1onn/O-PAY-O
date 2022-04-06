@@ -21,6 +21,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.33*"/>
@@ -60,8 +61,8 @@
                 <materialDesign:PackIcon Kind="Eye" Width="30" Height="30" Foreground="#f0f0f0"/>
             </Button>
 
-            <Button Grid.Column="2" Style="{StaticResource MaterialDesignIconButton}">
-                <materialDesign:PackIcon Kind="Book" Width="30" Height="30" Foreground="#f0f0f0"/>
+            <Button Command="{Binding Save}" Grid.Column="2" Style="{StaticResource MaterialDesignIconButton}">
+                <materialDesign:PackIcon Kind="FloppyDisk" Width="30" Height="30" Foreground="#f0f0f0"/>
             </Button>
 
             <Button Command="{Binding IncomeTypes}" Grid.Column="3" Style="{StaticResource MaterialDesignIconButton}">
@@ -90,11 +91,11 @@
             </Button>
 
             <Button Grid.Column="2" Style="{StaticResource None}">
-                <materialDesign:PackIcon Kind="RectangleOutline" HorizontalAlignment="Center" Width="25" Height="25"/>
+                <materialDesign:PackIcon Kind="RectangleOutline" HorizontalAlignment="Center" Width="25" Height="25" MouseDown="PackIcon_MouseDown_1"/>
             </Button>
 
             <Button Grid.Column="1" Style="{StaticResource None}">
-                <materialDesign:PackIcon Kind="FormatVerticalAlignBottom" HorizontalAlignment="Center" Width="25" Height="25"/>
+                <materialDesign:PackIcon Kind="FormatVerticalAlignBottom" HorizontalAlignment="Center" Width="25" Height="25" MouseDown="PackIcon_MouseDown"/>
             </Button>
         </Grid>
 

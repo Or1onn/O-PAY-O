@@ -1,5 +1,7 @@
-﻿using System;
+﻿using O_PAY_O.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,11 @@ namespace O_PAY_O.View
     /// </summary>
     public partial class CategoriesView : UserControl
     {
+
         public CategoriesView()
         {
             InitializeComponent();
+
         }
     }
 }
